@@ -1,0 +1,6 @@
+@import './_variables.scss';
+
+@mixin font-style($font-weight, $font-size, $font-family, $color: $primary-color) {
+    font: $font-weight $font-size $font-family;
+    color: $color;
+}
