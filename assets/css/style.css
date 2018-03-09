@@ -259,7 +259,8 @@ sub {
 header {
   padding: 32px 0;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   header h1 {
     padding-right: 75px; }
   header nav {
@@ -267,17 +268,35 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    header nav li {
+    header nav li.menu {
+      position: relative;
       list-style: none; }
-      header nav li a {
+      header nav li.menu:hover ul.sub-menu {
+        display: block; }
+      header nav li.menu ul.sub-menu {
+        max-width: 212px;
+        width: 100%;
+        padding: 22px 24px;
+        box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+        display: none;
+        position: absolute;
+        left: -15px; }
+        header nav li.menu ul.sub-menu li {
+          list-style: none; }
+          header nav li.menu ul.sub-menu li a {
+            font: 400 18px "OpenSans";
+            color: #434343;
+            line-height: 40px; }
+      header nav li.menu a {
         font: 400 18px "OpenSans";
         color: #434343;
         text-decoration: none;
         text-transform: capitalize; }
-        header nav li a:hover {
+        header nav li.menu a:hover {
           font: 700 18px "OpenSans";
           color: #ff5f3b; }
-      header nav li:last-child {
+      header nav li.menu:last-child {
         padding: 10px 15px;
         font: 600 18px "OpenSans";
         color: #5f2073;
@@ -285,6 +304,254 @@ header {
         background-color: rgba(243, 243, 243, 0.49); }
 
 main .banner {
-  background: url("../images/banner.png") no-repeat; }
+  height: auto;
+  max-height: 550px;
+  min-height: 420px;
+  position: relative;
+  z-index: -1;
+  background: url("../images/banner.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center; }
+  main .banner .banner-details {
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    text-align: left; }
+    main .banner .banner-details .marketing-wrap {
+      display: flex;
+      align-items: center; }
+      main .banner .banner-details .marketing-wrap .marketing {
+        width: 56%; }
+        main .banner .banner-details .marketing-wrap .marketing .ad {
+          padding-bottom: 11px; }
+          main .banner .banner-details .marketing-wrap .marketing .ad h2 {
+            padding-bottom: 22px;
+            font: 700 60px "OpenSans";
+            color: #fff;
+            line-height: 40px;
+            text-transform: capitalize; }
+          main .banner .banner-details .marketing-wrap .marketing .ad p {
+            font: 300 48px "OpenSans";
+            color: #fff;
+            line-height: 40px; }
+        main .banner .banner-details .marketing-wrap .marketing .banner-support {
+          font: 400 14px "OpenSans";
+          color: #fff;
+          line-height: 24px; }
+          main .banner .banner-details .marketing-wrap .marketing .banner-support p:first-child {
+            opacity: 0.6; }
+          main .banner .banner-details .marketing-wrap .marketing .banner-support p:nth-child(2) {
+            opacity: 0.4; }
+          main .banner .banner-details .marketing-wrap .marketing .banner-support p:last-child {
+            opacity: 0.2; }
+      main .banner .banner-details .marketing-wrap .marketing-support {
+        width: 44%; }
+        main .banner .banner-details .marketing-wrap .marketing-support .contact {
+          padding-bottom: 49px; }
+          main .banner .banner-details .marketing-wrap .marketing-support .contact p {
+            font: 400 18px "OpenSans";
+            color: #fff;
+            line-height: 24px; }
+            main .banner .banner-details .marketing-wrap .marketing-support .contact p a {
+              font: 700 18px "OpenSans";
+              color: #fff;
+              line-height: 24px; }
+        main .banner .banner-details .marketing-wrap .marketing-support button {
+          padding: 20px 30px;
+          border: 0;
+          outline: 0;
+          box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.3);
+          border-radius: 4px;
+          background: -webkit-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+          background: -moz-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+          background: -o-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+          background: -ms-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+          background: linear-gradient(0deg, #ff5e3a 0%, #ff5e3a 100%);
+          font: 700 18px "OpenSans";
+          color: #fff;
+          text-shadow: 0px -1px 0px rgba(168, 81, 87, 0.75); }
+  main .banner .server {
+    width: 100%;
+    position: absolute;
+    bottom: -85px; }
+    main .banner .server img {
+      width: 100%; }
+  main .banner .left-arrow {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 5%; }
+    main .banner .left-arrow img {
+      max-width: 31px;
+      width: 100%; }
+  main .banner .right-arrow {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 5%; }
+    main .banner .right-arrow img {
+      max-width: 31px;
+      width: 100%; }
+  main .banner .services {
+    width: 100%;
+    padding: 35px 0;
+    position: absolute;
+    bottom: -85px;
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3; }
+main .digital-landscape {
+  margin-top: 85px;
+  text-align: center; }
+  main .digital-landscape h2 {
+    padding: 55px 0 50px 0;
+    font: 300 36px "OpenSans";
+    color: #0a0a0a;
+    line-height: 40px; }
+    main .digital-landscape h2 span {
+      font: 400 36px "OpenSans";
+      color: #0a0a0a;
+      text-transform: capitalize; }
+  main .digital-landscape .type-of-server {
+    display: flex;
+    justify-content: space-between; }
+    main .digital-landscape .type-of-server .server {
+      width: 25%;
+      padding: 30px 28px;
+      margin-right: 25px;
+      background-color: #f3f3f3; }
+      main .digital-landscape .type-of-server .server:last-child {
+        margin-right: 0; }
+      main .digital-landscape .type-of-server .server h3 {
+        padding: 0 0 24px 0;
+        border-bottom: 1px solid #000;
+        font: 700 18px "OpenSans";
+        color: #67267a;
+        line-height: 20px;
+        text-transform: capitalize; }
+      main .digital-landscape .type-of-server .server .price span.from {
+        padding: 12px 0;
+        display: block;
+        font: 700 12px "OpenSans";
+        color: #67267a;
+        line-height: 20px; }
+      main .digital-landscape .type-of-server .server .price p {
+        font: 700 48px "OpenSans";
+        color: #ff5e3a;
+        line-height: 20px; }
+        main .digital-landscape .type-of-server .server .price p span.super {
+          display: inline-block;
+          font: 700 24px "OpenSans";
+          color: #ff603c;
+          line-height: 20px;
+          vertical-align: super; }
+        main .digital-landscape .type-of-server .server .price p span.month {
+          font: 700 10px "OpenSans";
+          color: #b4b4b4;
+          line-height: 40px;
+          margin-left: -25px; }
+      main .digital-landscape .type-of-server .server .description {
+        padding-bottom: 43px; }
+        main .digital-landscape .type-of-server .server .description p {
+          font: 700 16px "OpenSans";
+          color: #666565;
+          line-height: 30px; }
+          main .digital-landscape .type-of-server .server .description p span.bold {
+            font: 600 16px "OpenSans";
+            color: #666565; }
+      main .digital-landscape .type-of-server .server button {
+        padding: 20px 38px 11px 30px;
+        margin-bottom: 34px;
+        border-radius: 4px;
+        background: -webkit-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+        background: -moz-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+        background: -o-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+        background: -ms-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+        background: linear-gradient(0deg, #ff5e3a 0%, #ff5e3a 100%);
+        box-shadow: 0px 5px 0px 0px #a3322e;
+        font: 700 18px "OpenSans";
+        color: #ffffff;
+        text-shadow: 0px -1px 0px rgba(168, 81, 87, 0.75);
+        text-transform: capitalize; }
+  main .digital-landscape .contact {
+    padding: 52px 0 70px 0; }
+    main .digital-landscape .contact p {
+      font: 300 36px "OpenSans";
+      color: #0a0a0a;
+      line-height: 40px; }
+      main .digital-landscape .contact p.number {
+        padding: 43px 0 37px 0; }
+        main .digital-landscape .contact p.number span {
+          font: 700 36px "OpenSans";
+          color: #5b136d;
+          line-height: 40px; }
+      main .digital-landscape .contact p.or {
+        font: 400 24px "OpenSans";
+        color: #5b136d; }
+      main .digital-landscape .contact p.email {
+        padding-top: 32px; }
+        main .digital-landscape .contact p.email span {
+          font: 700 24px "OpenSans";
+          color: #662479;
+          line-height: 40px; }
+  main .digital-landscape .about {
+    padding-bottom: 95px;
+    display: flex; }
+    main .digital-landscape .about p {
+      font: 400 18px "OpenSans";
+      color: #0a0a0a;
+      line-height: 20px;
+      text-align: justify;
+      transform: scaleY(1.0109); }
+      main .digital-landscape .about p:first-child {
+        padding-right: 20px; }
+  main .digital-landscape .clients {
+    padding-bottom: 42px;
+    font: 700 14px "OpenSans";
+    color: #868686;
+    line-height: 24px; }
+    main .digital-landscape .clients .client-logos {
+      max-width: 689px;
+      margin: 0 auto; }
+      main .digital-landscape .clients .client-logos img {
+        width: 100%; }
+
+footer .footer-details {
+  padding: 47px 0 52px 0;
+  background-color: #f3f3f3; }
+  footer .footer-details ul.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none; }
+    footer .footer-details ul.menu li a {
+      font: 700 14px "OpenSans";
+      color: #ff5f3b;
+      line-height: 30px;
+      text-decoration: none;
+      text-transform: capitalize; }
+    footer .footer-details ul.menu li:last-child ul li span {
+      text-transform: capitalize; }
+      footer .footer-details ul.menu li:last-child ul li span a {
+        font: 700 14px "OpenSans";
+        color: #662479;
+        line-height: 24px; }
+    footer .footer-details ul.menu li ul {
+      list-style: none; }
+      footer .footer-details ul.menu li ul li a {
+        font: 400 14px "OpenSans";
+        color: #434343;
+        line-height: 24px;
+        text-decoration: none;
+        text-transform: capitalize; }
+footer .footer-copy-right .copy-right {
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between; }
+  footer .footer-copy-right .copy-right p {
+    font: 700 14px "OpenSans";
+    color: #565656; }
+    footer .footer-copy-right .copy-right p span {
+      font: 400 12px "OpenSans";
+      color: #565656;
+      text-transform: capitalize; }
 
 /*# sourceMappingURL=style.css.map */

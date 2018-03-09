@@ -14,24 +14,58 @@ header {
     padding: 32px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     h1 {
         padding-right: 75px;
     }
+
     nav {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        li {
+
+        li.menu {
+            position: relative;
             list-style: none;
+
+            &:hover {
+                ul.sub-menu {
+                    display: block;
+                }
+            }
+
+            ul.sub-menu {
+                max-width: 212px;
+                width: 100%; 
+                padding: 22px 24px;
+                box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.15);
+                background-color: #fff;
+                display: none;
+                position: absolute;
+                left: -15px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        @include font-style (400, 18px, 'OpenSans', #434343);
+                        line-height: 40px;
+                    }
+                }
+            }
+
             a {
                 @include font-style(400, 18px, 'OpenSans', #434343);
                 text-decoration: none;
                 text-transform: capitalize;
+
                 &:hover {
                     @include font-style(700, 18px, 'OpenSans', #ff5f3b);
                 }
             }
+
             &:last-child {
                 padding: 10px 15px;
                 @include font-style(600, 18px, 'OpenSans', #5f2073);
@@ -44,6 +78,366 @@ header {
 
 main {
     .banner {
+        height: auto;
+        max-height: 550px;
+        min-height: 420px;
+        position: relative;
+        z-index: -1;
         background: url('../images/banner.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+
+        .banner-details {
+            width: 100%;
+            position: absolute;
+            top: 64px;
+            text-align: left;
+
+            .marketing-wrap {
+                display: flex;
+                align-items: center;
+
+                .marketing {
+                    width: 56%;
+
+                    .ad {
+                        padding-bottom: 11px;
+
+                        h2 {
+                            padding-bottom: 22px;
+                            @include font-style(700, 60px, 'OpenSans', #fff);
+                            line-height: 40px;
+                            text-transform: capitalize;
+                        }
+
+                        p {
+                            @include font-style(300, 48px, 'OpenSans', #fff);
+                            line-height: 40px;
+                        }
+                    }
+
+                    .banner-support {
+                        @include font-style(400, 14px, 'OpenSans', #fff);
+                        line-height: 24px;
+
+                        p {
+                            &:first-child {
+                                opacity: 0.6;
+                            }
+
+                            &:nth-child(2) {
+                                opacity: 0.4;
+                            }
+
+                            &:last-child {
+                                opacity: 0.2;
+                            }
+                        }
+                    }
+                }
+
+                .marketing-support {
+                    width: 44%;
+
+                    .contact {
+                        padding-bottom: 49px;
+
+                        p {
+                            @include font-style(400, 18px, 'OpenSans', #fff);
+                            line-height: 24px;
+
+                            a {
+                                @include font-style(700, 18px, 'OpenSans', #fff);
+                                line-height: 24px;
+                            }
+                        }
+                    }
+
+                    button {
+                        padding: 20px 30px;
+                        border: 0;
+                        outline: 0;
+                        box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.3);
+                        border-radius: 4px;
+                        background: -webkit-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+                        background: -moz-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+                        background: -o-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+                        background: -ms-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+                        background: linear-gradient(0deg, #ff5e3a 0%, #ff5e3a 100%);
+                        @include font-style(700, 18px, 'OpenSans', #fff);
+                        text-shadow: 0px -1px 0px rgba(168, 81, 87, 0.75);
+                    }
+                }
+            }
+        }
+
+        .server {
+            width: 100%;
+            position: absolute;
+            bottom: -85px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .left-arrow {
+            position: absolute;
+            top: calc(50% - 25px);
+            left: 5%;
+
+            img {
+                max-width: 31px;
+                width: 100%;
+            }
+        }
+
+        .right-arrow {
+            position: absolute;
+            top: calc(50% - 25px);
+            right: 5%;
+
+            img {
+                max-width: 31px;
+                width: 100%;
+            }
+        }
+
+        .services {
+            width: 100%;
+            padding: 35px 0;
+            position: absolute;
+            bottom: -85px;
+            display: flex;
+            justify-content: center;
+            background-color: #f3f3f3;
+        }
+    }
+
+    .digital-landscape {
+        margin-top: 85px;
+        text-align: center;
+
+        h2 {
+            padding: 55px 0 50px 0;
+            @include font-style(300, 36px, 'OpenSans', #0a0a0a);
+            line-height: 40px;
+
+            span {
+                @include font-style(400, 36px, 'OpenSans', #0a0a0a);
+                text-transform: capitalize;
+            }
+        }
+
+        .type-of-server {
+                display: flex;
+                justify-content: space-between;
+
+            .server {
+                width: 25%;
+                padding: 30px 28px;
+                margin-right: 25px;
+                background-color: #f3f3f3;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                h3 {
+                    padding: 0 0 24px 0;
+                    border-bottom: 1px solid #000;
+                    @include font-style(700, 18px, 'OpenSans', #67267a);
+                    line-height: 20px;
+                    text-transform: capitalize;
+                }
+
+                .price {
+                    span.from {
+                        padding: 12px 0;
+                        display: block;
+                        @include font-style(700, 12px, 'OpenSans', #67267a);
+                        line-height: 20px;
+                    }
+
+                    p {
+                        @include font-style(700, 48px, 'OpenSans', #ff5e3a);
+                        line-height: 20px;
+
+                        span.super {
+                            display: inline-block;
+                            @include font-style(700, 24px, 'OpenSans', #ff603c);
+                            line-height: 20px;
+                            vertical-align: super;
+                        } 
+
+                        span.month {
+                            @include font-style(700, 10px, 'OpenSans', #b4b4b4);
+                            line-height: 40px;
+                            margin-left: -25px;
+                        }                       
+                    }
+                }
+
+                .description {
+                    padding-bottom: 43px;
+
+                    p {
+                        @include font-style (700, 16px, 'OpenSans', #666565);
+                        line-height: 30px;
+
+                        span.bold {
+                            @include font-style (600, 16px, 'OpenSans', #666565);
+                        }
+                    }
+                }
+
+                button {
+                    padding: 20px 38px 11px 30px;
+                    margin-bottom: 34px;
+                    border-radius: 4px;
+                    background: -webkit-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+                    background: -moz-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+                    background: -o-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+                    background: -ms-linear-gradient(90deg, #ff5e3a 0%, #ff5e3a 100%);
+                    background: linear-gradient(0deg, #ff5e3a 0%, #ff5e3a 100%);
+                    box-shadow: 0px 5px 0px 0px #a3322e;
+                    @include font-style (700, 18px, 'OpenSans', #ffffff);
+                    text-shadow: 0px -1px 0px rgba(168, 81, 87, 0.75);
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        .contact {
+            padding: 52px 0 70px 0;
+
+            p {
+                @include font-style(300, 36px, 'OpenSans', #0a0a0a);
+                line-height: 40px;
+
+                &.number {
+                    padding: 43px 0 37px 0;
+
+                    span {
+                        @include font-style(700, 36px, 'OpenSans', #5b136d);
+                        line-height: 40px;                      
+
+                    }
+                }
+
+                &.or {
+                    @include font-style(400, 24px, 'OpenSans', #5b136d);
+                }
+
+                &.email {
+                    padding-top: 32px;
+
+                    span {
+                        @include font-style(700, 24px, 'OpenSans', #662479);
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+
+        .about {
+            padding-bottom: 95px;
+            display: flex;
+
+            p {
+               @include font-style(400, 18px, 'OpenSans', #0a0a0a);                 
+                line-height: 20px;
+                text-align: justify;
+                transform: scaleY(1.0109);
+
+                &:first-child {
+                    padding-right: 20px;
+                }
+            }
+        }
+
+        .clients {
+            padding-bottom: 42px;
+            @include font-style(700, 14px, 'OpenSans', #868686);       
+            line-height: 24px;
+
+            .client-logos {
+                max-width: 689px;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    
+    .footer-details {
+        padding: 47px 0 52px 0;
+        background-color:  #f3f3f3;
+
+        ul.menu {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+             li {
+                 a {
+                    @include font-style(700, 14px, 'OpenSans', #ff5f3b);
+                    line-height: 30px;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                }
+
+                &:last-child {
+                    ul {
+                        li {
+                            span {
+                                text-transform: capitalize;
+
+                                a {
+                                    @include font-style(700, 14px, 'OpenSans', #662479);
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        a {
+                            @include font-style(400, 14px, 'OpenSans', #434343);
+                            line-height: 24px;
+                            text-decoration: none;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+             }
+        }
+    }
+    
+    .footer-copy-right {
+        .copy-right {
+            padding: 28px 0;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                @include font-style(700, 14px, 'OpenSans', #565656);
+                
+                span {
+                    @include font-style(400, 12px, 'OpenSans', #565656);
+                    text-transform: capitalize;
+                }
+            }
+        }
     }
 }

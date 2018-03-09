@@ -31,12 +31,11 @@
 
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- html5shiv aka html5 shim. Supporting HTML5 and CSS for IE browsers less than IE9. -->
     <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
 </head>
 
 <body>
@@ -49,22 +48,44 @@
                     </a>
                 </h1>
                 <nav>
-                    <li>
+                    <li class="menu">
                         <a href="#" title="Home">home</a>
                     </li>
-                    <li>
+                    <li class="menu">
                         <a href="#" title="Plans And Service">plans and service</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#" title="Dedicated Server">dedicated server</a>
+                            </li>
+                            <li>
+                                <a href="#" title="VPS Server">VPS server</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Shared Hosting">shared hosting</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Colocation">colocation</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="menu">
                         <a href="#" title="Infrastructure">infrastructure</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#" title="Dedicated Server">dedicated server</a>
+                            </li>
+                            <li>
+                                <a href="#" title="VPS Server">VPS server</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="menu">
                         <a href="#" title="News">news</a>
                     </li>
-                    <li>
+                    <li class="menu">
                         <a href="#" title="Abount">about</a>
                     </li>
-                    <li>
+                    <li class="menu">
                         <a href="#" title="Support">support</a>
                     </li>
                 </nav>
@@ -72,35 +93,204 @@
         </div>
         <main>
             <div class="banner">
-                <div class="wrapper">
-                    <div class="banner-details">
-                        <div class="marketing">
-                            <div class="ad">
-                                <h2>dedicated servers</h2>
-                                <p>starting from 99usd</p>
+                <div class="banner-details">
+                    <div class="wrapper">
+                        <div class="marketing-wrap">
+                            <div class="marketing">
+                                <div class="ad">
+                                    <h2>dedicated servers</h2>
+                                    <p>Starting from 99usd</p>
+                                </div>
+                                <div class="banner-support">
+                                    <p>24*7 knowledgable support</p>
+                                    <p>Full Root access</p>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                </div>
                             </div>
-                            <div class="banner-support">
-                                <img src="assets/images/banner-support.png" alt="Banner Support">
+                            <div class="marketing-support">
+                                <div class="contact">
+                                    <p>Call us:<a href="tel:+8189951560">(818) 995-1560</a></p>
+                                    <p>E-mail us:<a href="mailto:sales@digitallandscape.com">sales@digitallandscape.com</a></p>
+                                </div>
+                                <button>Compare our pricing plans</button>
                             </div>
-                        </div>
-                        <div class="marketing-support">
-                            <div class="contact">
-                                <p>Call us:<span>(818) 995-1560</span></p>
-                                <p>E-mail us:<span>sales@digitallandscape.com</span></p>
-                            </div>
-                            <button>Compare our pricing plans</button>
                         </div>
                     </div>
                 </div>
                 <div class="server">
                     <img src="assets/images/server.png" alt="Server" />
                 </div>
+                <div class="left-arrow">
+                    <img src="assets/images/left-arrow.png" alt="Left Arrow" />
+                </div>
+                <div class="right-arrow">
+                    <img src="assets/images/right-arrow.png" alt="Right Arrow" />
+                </div>
+                <div class="services">
+                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                    <p>We have recently added several services. Our servers are faster than ever. <a href="#" title="Read Full  News Story">Read full news story.</a></p>
+                </div>
             </div>
+            <div class="digital-landscape">
+                <div class="wrapper">
+                    <h2>Grow your business with <span>digital landscape</span></h2>
+                    <div class="type-of-server">
+                        <div class="server">
+                            <h3>dedicated servers</h3>
+                            <div class="price">
+                                <span class="from">from</span>
+                                <p><span class="super">$</span>99<span class="super">00</span><span class="month">/month</span></p>
+                            </div>
+                            <div class="description">
+                                <p><span class="bold">1 TB</span> Hard Drive</p>
+                                <p><span class="bold">8 GB</span> ECC DDR3</p>
+                                <p><span class="bold">4000 GB</span>Transfer</p>
+                                <p><span class="bold">100 Mbps</span> Uplink</p>
+                            </div>
+                            <button>order now</button>
+                        </div>
+                        <div class="server">
+                            <h3>VPS</h3>
+                            <div class="price">
+                                <span class="from">from</span>
+                                <p><span class="super">$</span>99<span class="super">00</span><span class="month">/month</span></p>
+                            </div>
+                            <div class="description">
+                                <p><span class="bold">1 TB</span> Hard Drive</p>
+                                <p><span class="bold">8 GB</span> ECC DDR3</p>
+                                <p><span class="bold">4000 GB</span>Transfer</p>
+                                <p><span class="bold">100 Mbps</span> Uplink</p>
+                            </div>
+                            <button>order now</button>
+                        </div>
+                        <div class="server">
+                            <h3>shared hosting</h3>
+                            <div class="price">
+                                <span class="from">from</span>
+                                <p><span class="super">$</span>99<span class="super">00</span><span class="month">/month</span></p>
+                            </div>
+                            <div class="description">
+                                <p><span class="bold">1 TB</span> Hard Drive</p>
+                                <p><span class="bold">8 GB</span> ECC DDR3</p>
+                                <p><span class="bold">4000 GB</span>Transfer</p>
+                                <p><span class="bold">100 Mbps</span> Uplink</p>
+                            </div>
+                            <button>order now</button>
+                        </div>
+                        <div class="server">
+                            <h3>colocation</h3>
+                            <div class="price">
+                                <span class="from">from</span>
+                                <p><span class="super">$</span>99<span class="super">00</span><span class="month">/month</span></p>
+                            </div>
+                            <div class="description">
+                                <p><span class="bold">1 TB</span> Hard Drive</p>
+                                <p><span class="bold">8 GB</span> ECC DDR3</p>
+                                <p><span class="bold">4000 GB</span>Transfer</p>
+                                <p><span class="bold">100 Mbps</span> Uplink</p>
+                            </div>
+                            <button>order now</button>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <p>Can't decide which one best suits you?</p>
+                        <p class="number">Call us - <span>(818) 995-1560</span>
+                            <p class="or">or</p>
+                            <p class="email">Email us <span>- sales@digitallandscape.com</span></p>
+                    </div>
+                    <div class="about">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                            with desktop publishing software
+                        </p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                            with desktop
+                        </p>
+                    </div>
+                    <div class="clients">
+                        <h4>some of our satisfied clients include..</h4>
+                        <div class="client-logos">
+                            <img src="assets/images/client-logos.png" alt="Client Logos" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-details">
+                <div class="wrapper">
+                    <ul class="menu">
+                        <li>
+                            <a href="#" title="Home">home</a>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="Plan and Services">plan and services</a>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Dedicated Servers">dedicated servers</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Dedicated Servers">VPS server</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shared Hosting">shared hosting</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Colocation">colocation</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="Infrastructure">infrastructure</a>
+                        </li>
+                        <li>
+                            <a href="#" title="News">news</a>
+                        </li>
+                        <li>
+                            <a href="#" title="About">about</a>
+                            <ul>
+                                <li>
+                                    <a href="#" title="About Company">about company</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Contact Us">contact us</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="Support">support</a>
+                            <ul>
+                                <li>
+                                    <span>call us:<a href="#" title=""> (818) 995-1560</a></span>
+                                </li>
+                                <li>
+                                    <span>contact us:<a href="#" title=""> sales@digitallandscape.com</a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copy-right">
+                <div class="wrapper">
+                    <div class="copy-right">
+                        <p><span>design: </span>we.do</p>
+                        <p><span>copyright &copy; </span>2014 Digital Landscape</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    </main>
-    <footer></footer>
-
     </div>
 
     <!--  <script src="js/vendors/jquery-1.8.3.min.js"></script>
